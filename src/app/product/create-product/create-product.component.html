@@ -1,0 +1,85 @@
+<div class="container" style="max-width: 800px; background-color: white; padding-top: 90px;">
+  <h2>THÊM MÓN ĂN </h2>
+  <form #CreateForm="ngForm" (ngSubmit)="Submit()">
+
+    <div class="form-group">
+      <label for="food_name">TÊN MÓN ĂN:</label>
+      <input type="text" class="form-control"  placeholder="Enter Name" name="name" required [(ngModel)]="product.food_name" #food_name="ngModel"
+      [class.is-invalid]="food_name.invalid && food_name.touched">
+      <small class="text-danger"[class.d-none]="food_name.valid || food_name.untouched">food_name Id is required field</small>
+    </div>
+    <div class="form-group">
+      <label for="price">Giá: </label>
+      <input type="text" class="form-control" placeholder="Enter price" name="price" required
+        [(ngModel)]="product.price" #price="ngModel" [class.is-invalid]="price.invalid && price.touched">
+      <small class="text-danger" [class.d-none]="price.valid || price.untouched">price Id is required
+        field</small>
+    </div>
+    <div class="form-group">
+      <label for="unit">Đơn vị </label>
+      <select class="form-control" required (change)="selectUnit($event)">
+        <option selected disabled>
+          --mời bạn chọn--
+        </option>
+        <option  value=" Dĩa">
+         Dĩa
+        </option>
+        <option  value=" Đem Về">
+          Đem về
+        </option>
+        <option  value=" Theo Kg">
+          Theo Kg
+        </option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="service_id">Thực Đơn Buổi: </label>
+      <select class="form-control" required (change)="selectServices($event)">
+        <option selected disabled>
+          --mời bạn chọn--
+        </option>
+        <option *ngFor="let serviceItems of listService" value="{{serviceItems.id}}">
+          {{serviceItems?.name}}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="content">Mô tả:</label>
+      <textarea type="text" class="form-control"  placeholder="Enter content" name="content" required [(ngModel)]="product.content" #content="ngModel"
+      [class.is-invalid]="content.invalid && content.touched"></textarea>
+      <small class="text-danger"[class.d-none]="content.valid || content.untouched">content Id is required field</small>
+    </div>
+
+     <!-- <div class="form-group">
+      <label for="service">Thực đơn buổi: </label>
+
+      <select class="form-control" required (change)="selectService($event)">
+        <option selected disabled>
+          --mời bạn chọn--
+        </option>
+        <option  value=" Buổi sáng">
+         Buổi sáng
+        </option>
+        <option  value=" Buổi trưa">
+          Buổi trưa
+        </option>
+        <option  value=" Buổi tối">
+          Buổi tối
+        </option>
+      </select>
+    </div> -->
+
+    <div class="form-group">
+      <label for="pwd">Image</label><br>
+      <input type="file" name="file" (change)="Selected($event)">
+    </div>
+
+
+    <div class="form-group form-check">
+
+    </div>
+    <button [disabled]="CreateForm.form.invalid" type="submit" class="btn btn-info">Add</button>&nbsp;&nbsp;
+    <button [routerLink]="['/admin/list-province']" class="btn btn-success">Back</button>
+  </form>
+</div>

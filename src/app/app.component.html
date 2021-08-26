@@ -1,0 +1,81 @@
+<div>
+
+  <!-- container section start -->
+  <section id="container" class="">
+
+
+    <header class="header dark-bg">
+
+
+      <!--logo start-->
+      <a href="index.html" class="logo">KHANH <span class="lite">FOOD</span></a>
+      <!--logo end-->
+      <div class="top-nav notification-row">
+        <ul class="nav pull-right top-menu" style="margin-right: 100px;">
+          <li class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+              <span *ngIf="!user" routerLink="/account/login" >Login</span>
+              <span class="profile-ava" *ngIf="user">
+                <img style="width: 35px; height: 35px;" alt="" src="/assets/image/{{this.urlavatar}}">
+              </span>
+              <span class="username" *ngIf="user"> {{user.user_name}}</span>
+            </a>
+            <ul class="dropdown-menu extended logout">
+              <!-- <div class="log-arrow-up"></div> -->
+              <li *ngIf="!user">
+                <span class="nav-item nav-link" routerLink="/account/register" routerLinkActive="active">Register</span>
+              </li>
+              <li *ngIf="user">
+                <a class="nav-item nav-link" routerLink="/product/list-user" routerLinkActive="active"
+                  *ngIf="role === 1"><i class="icon_table"></i>Admin</a>
+                  <a class="nav-item nav-link" routerLink="/profile" routerLinkActive="active"><i class="fa fa-user-md"></i>Profile </a>
+                <a (click)="logout()" routerLinkActive="active" class="nav-link"><i class="icon_key_alt"></i>Logout </a>
+              </li>
+            </ul>
+         </li>
+        </ul>
+      </div>
+      <div class="top-nav notification-row">
+        <!-- notificatoin dropdown start-->
+        <ul class="nav pull-center top-menu" style="margin-right: 730px;">
+
+
+          <!-- alert notification end-->
+          <!-- user login dropdown start-->
+          <li id="alert_notificatoin_bar">
+            <a data-toggle="" href="#">
+              Home
+            </a>
+          </li>
+          <li id="alert_notificatoin_bar">
+            <a data-toggle="" routerLink="/menu" href="#">
+              Menu
+            </a>
+          </li>
+          <li id="alert_notificatoin_bar">
+            <a data-toggle="" routerLink="/home-blog" href="#">
+              Blog
+            </a>
+          </li>
+          <!-- user login dropdown end -->
+        </ul>
+
+
+        <!-- notificatoin dropdown end-->
+      </div>
+
+    </header>
+    <!--header end-->
+
+    <!--sidebar start-->
+
+    <!--sidebar end-->
+
+    <!--main content start-->
+
+    <!--main content end-->
+  </section>
+  <!-- container section start -->
+  <router-outlet></router-outlet>
+  <!-- javascripts -->
+</div>

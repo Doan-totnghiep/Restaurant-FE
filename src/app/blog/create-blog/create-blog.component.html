@@ -1,0 +1,47 @@
+<div class="container" style="max-width: 800px; background-color: white; padding-top: 90px;">
+  <h2>THÊM Blog MỚI </h2>
+  <form #CreateForm="ngForm" (ngSubmit)="Submit()">
+
+    <div class="form-group">
+      <label for="food_name">TITLE</label>
+      <input type="text" class="form-control"  placeholder="Enter Name" name="name" required [(ngModel)]="blog.title" #title="ngModel"
+      [class.is-invalid]="title.invalid && title.touched">
+      <small class="text-danger"[class.d-none]="title.valid || title.untouched">food_name Id is required field</small>
+    </div>
+    <div class="form-group">
+      <label for="content">MÔ TẢ NGẮN: </label>
+      <input type="text" class="form-control" placeholder="Enter content" name="content" required
+        [(ngModel)]="blog.content" #content="ngModel" [class.is-invalid]="content.invalid && content.touched">
+
+      <small class="text-danger" [class.d-none]="content.valid || content.untouched">price Id is required
+        field</small>
+    </div>
+    <div class="form-group">
+      <label for="contentlong">MÔ TẢ DÀI: </label>
+      <textarea type="text" class="form-control" placeholder="Enter contentlong" name="contentlong" required
+        [(ngModel)]="blog.contentlong" #contentlong="ngModel" [class.is-invalid]="contentlong.invalid && contentlong.touched">
+        </textarea>
+      <small class="text-danger" [class.d-none]="contentlong.valid || contentlong.untouched">price Id is required
+        field</small>
+    </div>
+    <div class="form-group">
+      <label for="price">CHÚ THÍCH: </label>
+      <input type="text" class="form-control" placeholder="Enter note" name="note" required
+        [(ngModel)]="blog.note" #note="ngModel" [class.is-invalid]="note.invalid && note.touched">
+
+      <small class="text-danger" [class.d-none]="note.valid || note.untouched">price Id is required
+        field</small>
+    </div>
+    <div class="form-group">
+      <label for="pwd">Image</label><br>
+      <input type="file" name="file" (change)="Selected($event)">
+    </div>
+
+
+    <div class="form-group form-check">
+
+    </div>
+    <button [disabled]="CreateForm.form.invalid" type="submit" class="btn btn-info">Add</button>&nbsp;&nbsp;
+    <button [routerLink]="['/product/list-blog']" class="btn btn-success">Back</button>
+  </form>
+</div>

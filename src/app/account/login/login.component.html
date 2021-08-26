@@ -1,0 +1,61 @@
+
+
+
+
+<div class="limiter">
+  <div class="container-login100">
+    <div class="wrap-login100">
+      <div class="login100-form-title" style="background-image: url(assets/loginform/images/1.jpg);">
+        <span class="login100-form-title-1">
+          ĐĂNG NHẬP
+        </span>
+      </div>
+
+      <form class="login100-form validate-form" #loginForm="ngForm"(ngSubmit)="loginUser()">
+        <div class="wrap-input100 validate-input m-b-26" data-validate="Username is required">
+          <span class="label-input100">Email
+          </span>
+          <input class="input100"  type="email"  placeholder="Enter email" name="email" [(ngModel)]="user.emailId" #email="ngModel" required pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+      [class.is-invalid]="email.invalid && email.touched">
+      <!-- <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email Id is required field</small> -->
+      <div *ngIf="email.errors && (email.invalid && email.touched)">
+        <small class="text-danger" *ngIf="email.errors.required"> Email Id is required field </small>
+        <small class="text-danger" *ngIf="email.errors.pattern"> Email the valid emailID </small>
+      </div>
+
+          <span class="focus-input100"></span>
+        </div>
+
+        <div class="wrap-input100 validate-input m-b-18" data-validate = "Password is required">
+          <span class="label-input100">Password</span>
+          <input class="input100" type="password" placeholder="Enter password" name="password" [(ngModel)]="user.password" #password="ngModel" required
+          [class.is-invalid]="password.invalid && password.touched">
+          <small class="text-danger" [class.d-none]="password.valid || password.untouched">password Id is required field</small>
+
+          <span class="focus-input100"></span>
+        </div>
+
+        <div class="flex-sb-m w-full p-b-30">
+          <div class="contact100-form-checkbox">
+            <input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+            <label class="label-checkbox100" for="ckb1">
+              Remember me
+            </label>
+          </div>
+
+          <div>
+            <a [routerLink]="['/account/register']" class="txt1">
+              Registration
+            </a>
+          </div>
+        </div>
+
+        <div class="container-login100-form-btn">
+          <button class="login100-form-btn" [disabled]="loginForm.form.invalid" >
+            Login
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

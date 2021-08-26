@@ -1,0 +1,17 @@
+input{
+  font-size: 14px;
+}
+textarea{
+  font-size: 14px;
+}
+label{
+  font-size: 16px;
+
+}
+.wrapper {
+  display: inline-block;
+  margin-top: 60px;
+  padding: 15px;
+  width: 113%;
+  margin-left: -133px;
+}

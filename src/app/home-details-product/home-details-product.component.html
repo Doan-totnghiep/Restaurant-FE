@@ -1,0 +1,189 @@
+
+
+  <section class="page-heading" style=" text-align: left;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 style="text-align: center;">Chi tiết món ăn</h1>
+                <p style="text-align: center;">Xem chi tiết tại đây, sẽ có nhiều ưu đãi dịch vụ cho các bạn khi có lần đặt hàng đầu tiên.</p>
+            </div>
+        </div>
+    </div>
+</section>
+  <section class="contact-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="section-heading">
+                 <p> <a href="#" style="color: rgb(255, 145, 0);">Nhà hàng</a> > <a href="#">Món ăn</a> > Chi tiết món ăn</p>
+                    <h2>{{product.food_name}}</h2>
+                </div>
+                <form id="contact" action="" method="post">
+                    <div class="row">
+                        <div class="col-md-12">
+                          <img src="{{imageUrl}}" width="500" height="400"><br>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <div class="section-heading contact-info">
+                 <h4 style="color:orange; padding-top:60px; ">XEM TẠI ĐÂY</h4>
+                    <h2 style="margin-bottom: 20px; padding-top: 10px;">CHI TIẾT MÓN ĂN</h2>
+                    <div class="" style="display: flex; justify-content: space-between; padding-top: 15px;">
+                      <i class="yellow fa fa-star"></i>
+                      <i class="yellow fa fa-star"></i>
+                      <i class="yellow fa fa-star"></i>
+                      <i class="yellow fa fa-star"></i>
+                      <i class="fa fa-star"></i>
+                      <p>  &ensp;Đánh giá của khách hàng</p>
+                      <p>Tại nhà hàng KHÁNH FOOD</p>
+                    </div>
+                    <hr>
+
+                    <div class="" style="padding-top: 25px;">
+                      <h2 style="font-size: 32px;
+                      margin: 0px 0 10px;
+                      font-weight: bold;
+                      color: #262626;
+                    ">{{product.price | currency}}</h2><br>
+                    <p>{{product.content}}
+                      </p>
+                       <hr>
+
+                        <div style="padding-top: 12px; padding-bottom: 12px;">
+                       <p> <em><i class="fa fa-address-card" aria-hidden="true"></i>
+                        25 Nguyễn Văn Cừ, Phường Vĩnh Ninh, Thành Phố Huế <br><i class="fa fa-phone" aria-hidden="true"></i>
+                        Việt Nam 0333870736</em></p>
+                      </div>
+                      </div>
+                </div>
+
+                <hr>
+                <div style="padding-top: 12px; justify-content: space-between; display: flex;">
+                  <em><b><i class="fa fa-shopping-cart" aria-hidden="true"></i> Uy Tính Cao</b> </em>
+                  <em><b><i class="fa fa-shopping-cart" aria-hidden="true"></i> Chất lượng sản phẩm tốt </b> </em>
+                  <em><b><i class="fa fa-shopping-cart" aria-hidden="true"></i> Nhà hàng KHANH FOOD</b> </em>
+
+              </div>
+                <hr>
+                <div style="padding-top: 12px; padding-bottom: 4px;">
+                <h4><b>CHIA SẺ TẠI ĐÂY</b></h4>
+              </div>
+                <footer>
+                              <ul class="social-icons">
+
+                                  <li><a rel="nofollow" href="http://www.facebook.com/templatemo" target="_parent"><i class="fa fa-facebook"></i></a></li>
+                                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                  <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                                  <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                              </ul>
+                </footer>
+                          </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- <div class="container mt-5 mb-5">
+  <div class="d-flex justify-content-center row">
+      <div class="d-flex flex-column col-md-8" *ngFor="let item of comments">
+          <div class="d-flex flex-row align-items-center text-left comment-top p-2 bg-white border-bottom px-4">
+              <div class="profile-image"><img class="rounded-circle" src="https://i.imgur.com/06EM6Iy.jpg" width="70"></div>
+              <div class="d-flex flex-column-reverse flex-grow-0 align-items-center votings ml-1"><i class="fa fa-sort-up fa-2x hit-voting"></i><span>127</span><i class="fa fa-sort-down fa-2x hit-voting"></i></div>
+              <div class="d-flex flex-column ml-3">
+                  <div class="d-flex flex-row post-title">
+                      <h5>Is sketch 3.9.1 stable?</h5><span class="ml-2">(Jesshead)</span>
+                  </div>
+                  <div class="d-flex flex-row align-items-center align-content-center post-title"><span class="bdge mr-1">video</span><span class="mr-2 comments">13 comments&nbsp;</span><span class="mr-2 dot"></span><span>6 hours ago</span></div>
+              </div>
+          </div>
+          <div class="coment-bottom bg-white p-2 px-4">
+              <div class="d-flex flex-row add-comment-section mt-4 mb-4"><img class="img-fluid img-responsive rounded-circle mr-2" src="https://i.imgur.com/KLeobJk.jpg" width="38"><input type="text" class="form-control mr-3" placeholder="Add comment"><button class="btn btn-primary" type="button">Comment</button></div>
+              <div class="collapsable-comment">
+                  <div class="d-flex flex-row justify-content-between align-items-center action-collapse p-2" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-1" href="#collapse-1"><span>Comments</span><i class="fa fa-chevron-down servicedrop"></i></div>
+                  <div id="collapse-1" class="collapse">
+                     
+                     
+                      <div class="commented-section mt-2">
+                          <div class="d-flex flex-row align-items-center commented-user">
+                              <h5 class="mr-2">Makhaya andrew</h5><span class="dot mb-1"></span><span class="mb-1 ml-2">10 hours ago</span>
+                          </div>
+                          <div class="comment-text-sm"><span>Nunc sed id semper risus in hendrerit gravida rutrum. Non odio euismod lacinia at quis risus sed. Commodo ullamcorper a lacus vestibulum sed arcu non odio euismod. Enim facilisis gravida neque convallis a. In mollis nunc sed id. Adipiscing elit pellentesque habitant morbi tristique senectus et netus. Ultrices mi tempus imperdiet nulla malesuada pellentesque.</span></div>
+                          <div class="reply-section">
+                              <div class="d-flex flex-row align-items-center voting-icons"><i class="fa fa-sort-up fa-2x mt-3 hit-voting"></i><i class="fa fa-sort-down fa-2x mb-3 hit-voting"></i><span class="ml-2">25</span><span class="dot ml-2"></span>
+                                  <h6 class="ml-2 mt-1">Reply</h6>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div> -->
+<div class="container mt-5">
+    <div class="d-flex justify-content-center row">
+        <div class="col-md-8">
+            <div class="d-flex flex-column comment-section">
+                <div class="bg-white p-2"*ngFor="let item of comments| paginate:{id: 'listing_pagination',
+                itemsPerPage:4,
+                currentPage: page,
+                totalItems:totalRecords}">
+                    <div class="d-flex flex-row user-info">
+                     
+                        <div class="d-flex flex-column justify-content-start ml-2">
+                          
+                          <span class="profile-ava">  <img alt="" src="../../../../assets/image/{{item.user_id.avatar}}" width="40px" height="40px"> {{item.user_id.name}} - {{item.datecomment | date : 'dd/MM/yyyy' }}</span></div>
+                    </div>
+                    <div class="mt-6">
+                        <p class="comment-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            {{item.comment}}</p>
+                    </div>
+                </div>
+                
+               
+                <h3>Bình Luận</h3>
+                <form #CreateForm="ngForm" (ngSubmit)="Submit()">
+                <div class="bg-light p-2">
+                    <div class="d-flex flex-row align-items-start">
+                      <!-- <img class="rounded-circle" src="{{ this.avatar}}" width="40"> -->
+                      <textarea class="form-control ml-1 shadow-none textarea"  [(ngModel)]="comment1.comment" name="commnet"></textarea>
+                    </div>
+                    <div class="mt-2 text-right">
+                      <button class="btn btn-primary btn-sm shadow-none" type="submit" [disabled]="CreateForm.form.invalid">Bình luận</button>
+                      <button class="btn btn-outline-primary btn-sm ml-1 shadow-none" type="button">Cancel</button>
+                    </div>
+                </div>
+              </form>
+            </div>
+            <pagination-controls id="listing_pagination" style="text-align: center;" maxSize="5" directionLinks="true"(pageChange)="page=$event"></pagination-controls>
+        </div>
+    </div>
+<footer >
+  <div class="container">
+      <div class="row">
+          <div class="col-md-4">
+              <p>Khánh không Copyright &copy; 2020 Victory Template</p>
+          </div>
+          <div class="col-md-4">
+              <ul class="social-icons">
+                  <li><a rel="nofollow" href="http://www.facebook.com/templatemo" target="_parent"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                  <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                  <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+              </ul>
+          </div>
+          <div class="col-md-4">
+            <p>Khánh Designed tại <em>BRYCEN Việt Nam</em></p>
+          </div>
+      </div>
+  </div>
+</footer>
+
+

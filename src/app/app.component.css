@@ -1,0 +1,11 @@
+.header div ul {
+  margin: 0px auto;
+}
+.nav-link {
+ 
+  font-size: 16px;
+  color: #fed189;
+  display: block;
+  padding: 0.5rem 1rem;
+  font-family: 'Roboto', arial, sans-serif;
+}

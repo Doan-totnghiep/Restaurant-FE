@@ -1,0 +1,79 @@
+<div class="container-fluid" >
+  <div class="panel panel-primary">
+     <div class="panel-body" style="margin-left: 35px; padding-top: 100px;">
+      <h1 style="text-align: center;">DANH SÁCH KHÁCH HÀNG ĐẶT BÀN</h1><br>
+      <div class="row">
+        <div class="col">
+          
+      
+          <input type="text" [(ngModel)]="searchValue" (change)="onSearch()" class="form-control" id="search" placeholder="Tìm kiếm">
+        </div>
+        <div class="col">
+          <button type="button" (change)="onSearch()"  class="btn btn-success btn-lg" id="search">Tìm kiếm</button>
+        </div>
+        <div class="col">
+          <button routerLink="/product/create-order" routerLinkActive="active" class="login100-form-btn float-right" >Thêm Đặt bàn</button>
+        </div>
+      </div>
+    
+
+     <table id="example" class="table table-striped table-bordered table-sm row-border hover" cellspacing="0"
+        width="100%">
+
+      <thead style="text-align: center;">
+        <tr>
+            <th>
+               HỌ VÀ TÊN KHÁCH HÀNG
+            </th>
+            <th>
+                NGÀY GIỜ ĐẶT
+            </th>
+            <th>
+              NGÀY CHÍNH XÁC
+            </th>
+            <th>
+              THỜI GIAN ĐẶT
+            </th>
+            <th>
+             SỐ NGƯỜI
+            </th>
+            <th>
+               SỐ ĐIỆN THOẠI
+            </th>
+            <th>
+              Action
+          </th>
+
+
+        </tr>
+      </thead>
+    <tbody>
+        <tr *ngFor = "let item of this.order| paginate:{id: 'listing_pagination',
+        itemsPerPage:5,
+        currentPage: page,
+        totalItems:totalRecords}" style="text-align: center;">
+
+            <td> <br>{{ item.fullname}} </td>
+
+            <!-- <td> <img style="width: 130px;"src="../assets/{{this.item.avatar}}" alt=""></td> -->
+            <td><br> {{item.date| date:"dd/MM/yyy/hh:mm:ss"}} </td>
+            <td> <br>{{ item.th}} </td>
+            <td> <br>{{ item.hour}} </td>
+            <td> <br>{{ item.person}} </td>
+            <td> <br>{{ item.phonenumber}} </td>
+            <td>
+
+              <br><button (click) = "UpdateOrder(item.id)" class = "btn btn-info btn-lg"> Edit</button>
+              <button (click) = "deleteOrder(item.id)" class = "btn btn-danger btn-lg" style="margin-left: 20px;">Delete</button>
+
+              
+            </td>
+        </tr>
+    </tbody>
+  </table>
+  </div>
+  </div>
+  <pagination-controls id="listing_pagination" style="text-align: center;" maxSize="5" directionLinks="true"(pageChange)="page=$event"></pagination-controls>
+
+</div>
+

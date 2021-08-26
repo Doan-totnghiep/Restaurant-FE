@@ -1,0 +1,77 @@
+<div class="container" style="padding-top: 90px;">
+  <ng-container *ngIf="this.formOrder">
+    <form (ngSubmit)="Submit()" [formGroup]="this.formOrder">
+      <div class="form-group">
+      </div>
+      <div class="form-group">
+        <label>Họ và tên khách hàng</label> <input type="text" class="form-control" 
+        formControlName="fullname"  maxlength="20" minlength="5">
+      </div>
+      <div class="form-group">
+        <label for="unit">Ngày chính xác </label>
+        <select class="form-control" required name='day' required formControlName="th">
+          <option value="">Chọn ngày</option>
+          <option value="Thứ 2">Thứ 2</option>
+          <option value="Thứ 3">Thứ 3</option>
+          <option value="Thứ 4">Thứ 4</option>
+          <option value="Thứ 5">Thứ 5</option>
+          <option value="Thứ 6">Thứ 6</option>
+          <option value="Thứ 7">Thứ 7</option>
+        </select>
+      </div>
+
+
+
+
+      <div class="form-group">
+        <label>Số điện thoại :</label> <input type="text" class="form-control" formControlName="phonenumber">
+      </div>
+      <div class="form-group">
+        <label for="unit">Thời gian chính xác </label>
+        <select class="form-control" required name='day' required formControlName="hour">
+          <option value="">Chọn giờ</option>
+          <option value="10:00">10:00</option>
+          <option value="12:00">12:00</option>
+          <option value="14:00">14:00</option>
+          <option value="16:00">16:00</option>
+          <option value="18:00">18:00</option>
+          <option value="20:00">20:00</option>
+          <option value="22:00">22:00</option>
+        </select>
+      </div>
+
+
+      <div class="form-group">
+        <label for="person">Số Người : </label>
+        <select class="form-control" required formControlName="person">
+          <option value="  1 người">
+            1 người
+          </option>
+          <option value="  2 người">
+            2 người
+          </option>
+          <option value=" 3 đến 4 người">
+           3 đến 4 người
+          </option>
+          <option value=" 6 đến 7 người">
+            6 đến 7 người
+          </option>
+          <option value=" trên 10 người">
+            trên 10 người
+          </option>
+          <option value=" trên 20 người">
+            trên 20 người
+          </option>
+        </select>
+      </div>
+      <br>
+      <input type="submit" value="Update">
+    </form>
+    
+  </ng-container>
+</div>
+
+
+
+
+<!-- project team & activity end -->

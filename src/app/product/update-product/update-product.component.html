@@ -1,0 +1,69 @@
+
+
+        <div class="container" style="padding-top: 90px;">
+
+          <ng-container *ngIf="this.formProduct">
+            <form (ngSubmit)="Submit()" [formGroup]="this.formProduct" >
+              <div class="form-group">
+
+
+              </div>
+              <div class="form-group">
+              <label>Ten mon an :</label> <input type="text" class="form-control" formControlName="food_name">
+              </div>
+
+              <div class="form-group">
+                <label for="unit">Đơn vị </label>
+                <select class="form-control" required formControlName="unit">
+
+                  <option  value=" Dĩa">
+                   Dĩa
+                  </option>
+                  <option  value=" Đem Về">
+                    Đem về
+                  </option>
+                  <option  value=" Theo Kg">
+                    Theo Kg
+                  </option>
+                </select>
+              </div>
+
+              <label>Gia : </label><input type="text" class="form-control" formControlName="price">
+              <br>
+              <img style="width: 150px;"src="../../assets/image/{{this.url}}" alt=""><br><br>
+              <input type="file" name="file" (change)="Selected($event)">
+
+
+              <div class="form-group">
+                <label>Mo ta :</label> <textarea type="text" class="form-control" formControlName="content"></textarea>
+                </div>
+
+
+
+
+                <div class="form-group">
+                  <label for="service">Thực đơn buổi: </label>
+                  <select class="form-control" required formControlName="service_id">
+                    <option selected disabled>
+                      --mời bạn chọn--
+                    </option>
+                    <option *ngFor="let serviceItems of listService" value="{{serviceItems.id}}">
+                      {{serviceItems?.name}}
+                    </option>
+                  </select>
+                </div>
+
+
+                <br>
+              <input type="submit" value="Update">
+            </form>
+            </ng-container>
+            </div>
+
+
+            <!-- project team & activity end -->
+
+
+
+
+

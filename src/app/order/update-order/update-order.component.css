@@ -1,0 +1,5 @@
+select.form-control:not([size]):not([multiple]) {
+    height: calc(2.25rem + 9px);
+    font-size: 13px;
+    color: #C0A7A7;
+}

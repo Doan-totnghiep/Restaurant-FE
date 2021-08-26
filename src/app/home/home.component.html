@@ -1,0 +1,352 @@
+<div class="container-fluid ">
+  <section class="banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <h4>Chào mừng bạn đến với</h4>
+          <h1 style="color:white; font-size: 30px; font-weight: 600;">NHÀ HÀNG KHÁNH FOOD</h1>
+          <p style="font-weight: 150;">KHÁNH FOOD thực sự hạnh phúc khi nhận được những phản hồi tích cực từ khách hàng,
+            KHÁNH FOOD sẽ mang lại những món ăn chất lượng cũng như những dịch vụ tốt nhất đến với quý thực khách.</p>
+          <div class="primary-button">
+            <a href="/menu" class="scroll-link" data-id="book-table">Xem Menu Tại Đây</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="cook-delecious">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-md-offset-1">
+          <div class="first-image">
+            <img src="assets/index/img/cook_01.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="cook-content">
+            <h4>thực đơn món ăn </h4>
+            <div class="contact-content">
+              <span>Liên hệ với chúng tôi theo số:</span>
+              <h6> 033 387 0736</h6>
+            </div>
+            <span>or</span>
+            <div class="primary-white-button">
+              <a href="http://localhost:4200/menu" class="scroll-link" data-id="book-table">Nhấn để xem menu</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="second-image">
+            <img src="assets/index/img/cook_02.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="service-item">
+            <a href="/menu">
+              <img src="assets/index/img/cook_breakfast.png" alt="Breakfast">
+              <h4>Bữa ăn sáng</h4>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="service-item">
+            <a href="/menu">
+              <img src="assets/index/img/cook_lunch.png" alt="Lunch">
+              <h4>Bữa trưa</h4>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="service-item">
+            <a href="/menu">
+              <img src="assets/index/img/cook_dinner.png" alt="Dinner">
+              <h4>Bữa tối</h4>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <div class="service-item">
+            <a href="/menu">
+              <img src="assets/index/img/cook_dessert.png" alt="Desserts">
+              <h4>Tráng miệng</h4>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="book-table">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="heading">
+            <h2>ĐẶT BÀN CỦA BẠN NGAY BÂY GIỜ</h2>
+          </div>
+        </div>
+        <div class="col-md-4 col-md-offset-2 col-sm-12">
+          <div class="left-image">
+            <img src="assets/index/img/book_left_image.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <div class="right-info">
+            <h2>Đặt bàn tại đây</h2>
+            <form #CreateForm="ngForm" (ngSubmit)="Submit()" id="form-submit" action="" method="get">
+              <div class="row">
+                <div class="col-md-6">
+                  <fieldset>
+                    <!-- <select [(ngModel)]="order.th" required name='date' required (change)="selectTh($event)">
+                      <option value=undefined>Chọn ngày</option>
+                      <option value="Thứ 2">Thứ 2</option>
+                      <option value="Thứ 3">Thứ 3</option>
+                      <option value="Thứ 4">Thứ 4</option>
+                      <option value="Thứ 5">Thứ 5</option>
+                      <option value="Thứ 6">Thứ 6</option>
+                      <option value="Thứ 7">Thứ 7</option>
+                    </select> -->
+                    <select required (change)="selectPerson($event)" name='person'>
+                      <option value=undefined> Số người </option>
+                      <option value="  1 người">
+                        1 người
+                      </option>
+                      <option value="  2 người">
+                        2 người
+                      </option>
+                      <option value=" 3 đến 4 người">
+                        3 đến 4 người
+                      </option>
+                      <option value=" 6 đến 7 người">
+                        6 đến 7 người
+                      </option>
+                      <option value=" trên 10 người">
+                        trên 10 người
+                      </option>
+                      <option value=" trên 20 người">
+                        trên 20 người
+                      </option>
+                    </select>
+                  </fieldset>
+                 
+                </div>
+               
+                <div class="col-md-6">
+                  <fieldset>
+                    <select required (change)="selectHour($event)">
+                      <option value=undefined>Chọn giờ</option>
+                      <option value="10:00">10:00</option>
+                      <option value="12:00">12:00</option>
+                      <option value="14:00">14:00</option>
+                      <option value="16:00">16:00</option>
+                      <option value="18:00">18:00</option>
+                      <option value="20:00">20:00</option>
+                      <option value="22:00">22:00</option>
+                    </select>
+                  </fieldset>
+                </div>
+                <div class="col-md-6" >
+                  <fieldset>
+                    <!-- <input type="fullname" class="form-control" placeholder="Họ và tên" name="fullname" required
+                      maxlength="20" minlength="5" [(ngModel)]="order.fullname" #fullname="ngModel"
+                      [class.is-invalid]="fullname.invalid && fullname.touched"> -->
+                      <!-- <input type="date" class="quantity-input input-text qty text" 
+                      [(ngModel)]="order.th" (change)="selectTh($event)"
+                       data-date="" data-date-format="DD MMMM YYYY" value="2021-08-27"> -->
+                     
+                      <input [(ngModel)]="order.th" required name='date' 
+                      required (change)="selectTh($event)" type="date" id="birthday"
+                       class="quantity-input input-text qty text" name="birthday" min="2021-08-26" max="2030-08-26">
+                  </fieldset>
+                  <!-- <mat-form-field class="example-full-width" appearance="fill">
+             
+                    <input matInput [matDatepicker]="picker">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                  </mat-form-field> -->
+                </div>
+               
+                <div class="col-md-6" style="margin-top: 15px;">
+                  <fieldset>
+                    <input type="text" class="quantity-input input-text qty text" onkeypress="return isNumberKey(event)"
+                      maxlength="11" minlength="10" placeholder="Số điện thoại" name="phonenumber" required
+                      [(ngModel)]="order.phonenumber" #phonenumber="ngModel"
+                      [class.is-invalid]="phonenumber.invalid && phonenumber.touched">
+                  </fieldset>
+                </div>
+                <div class="col-md-6" style="margin-top: -25px;">
+                  <fieldset>
+                    <!-- <select required (change)="selectPerson($event)" name='person'>
+                      <option value=undefined> Số người </option>
+                      <option value="  1 người">
+                        1 người
+                      </option>
+                      <option value="  2 người">
+                        2 người
+                      </option>
+                      <option value=" 3 đến 4 người">
+                        3 đến 4 người
+                      </option>
+                      <option value=" 6 đến 7 người">
+                        6 đến 7 người
+                      </option>
+                      <option value=" trên 10 người">
+                        trên 10 người
+                      </option>
+                      <option value=" trên 20 người">
+                        trên 20 người
+                      </option>
+                    </select> -->
+                    <input type="fullname" class="form-control" placeholder="Họ và tên" name="fullname" required
+                    maxlength="20" minlength="5" [(ngModel)]="order.fullname" #fullname="ngModel"
+                    [class.is-invalid]="fullname.invalid && fullname.touched">
+                  </fieldset>
+                </div>
+                <div class="col-md-6">
+                  <fieldset>
+                    <button [disabled]="CreateForm.form.invalid" type="submit" id="form-submit" class="btn">Đặt
+                      Ngay</button>
+                  </fieldset>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <button mat-button (click)="openSnackBar('khanh ok khanh', 'delete')">
+    nhan ngay nao
+  </button> -->
+  <section class="get-app" *ngIf="showMsg">
+    <h2 style="text-align: center; color: white; font-weight: 600px; font-size: 30px;">
+      Bạn đã đặt bàn thành công, chúng tôi sẽ liên hệ với bạn ngay bây giờ
+    </h2>
+    <div class="row">
+      <div class="primary-white-button" style="margin-left: 620px;">
+        <a href="http://localhost:4200/menu">XEM MENU TẠI ĐÂY</a>
+      </div>
+    </div>
+  </section>
+  <section class="featured-food">
+    <div class="container">
+      <div class="row">
+        <div class="heading">
+          <h2>Món ăn được đặt nhiều nhất</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="food-item" style="width:380px" *ngFor="let item of this.product|search: searchValue| paginate:{id: 'listing_pagination',
+            itemsPerPage:3,
+            currentPage: page,
+            totalItems:totalRecords}">
+          <h2 style="text-align: center;">{{item.food_name}}</h2>
+          <a href="/detailsproduct/{{item.id}}"> <img class="card-img-top"
+              src="./../../../assets/image/{{this.item.avatar}}" alt="Card image" style="width:100%"></a>
+
+          <div class="col-md-12">
+
+            <h4 class="price">{{item.price | currency}}</h4>
+
+            <div class="text-content">
+              <h3 class="" style="text-align: right;">{{item.service_id?.name}}</h3>
+              <p class="card-text" style="text-align: center; text-align: justify; ">{{item.content}}</p>
+              <div class="details">
+                <a href="/detailsproduct/{{item.id}}">Xem chi tiết >></a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <pagination-controls id="listing_pagination" style="text-align: center;" maxSize="5" directionLinks="true"
+    (pageChange)="page=$event"></pagination-controls>
+
+  <section class="our-blog">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="heading">
+            <h2>Blog của chúng tôi</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="blog-post" style="width:550px" *ngFor="let item of blog">
+          <a href="/detailsblog/{{item.id}}"> <img class="card-img-top" src="../../assets/image/{{this.item.avatar}}"
+              alt="Card image" width="50%" height="250px"></a>
+          <div class="date">26 Oct 2017</div>
+          <div class="right-content">
+            <h4>{{item.title}}</h4>
+            <span>{{item.note}}</span>
+            <p style="text-align: justify;">{{item.content}}</p>
+            <span> {{item.date| date:"dd/MM/yyy"}}</span>
+
+            <div class="text-button">
+              <a href="/detailsblog/{{item.id}}">Xem chi tiết >></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="sign-up">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="heading">
+            <h2>ĐĂNG KÝ ĐỂ ĐƯỢC NHẬN TIN TỨC TỪ CHÚNG TÔI</h2>
+          </div>
+        </div>
+      </div>
+      <form id="contact" action="" method="get">
+        <div class="row">
+          <div class="col-md-4 col-md-offset-3">
+            <fieldset>
+              <input name="email" type="text" class="form-control" id="email" placeholder="Nhập email tại đây..."
+                required>
+            </fieldset>
+          </div>
+          <div class="col-md-2">
+            <fieldset>
+              <button type="submit" id="form-submit" class="btn">Gửi Message</button>
+            </fieldset>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <p>Nhà hàng Khánh FOOD &copy; Sẽ không làm bạn thất vọng</p>
+      </div>
+      <div class="col-md-4">
+        <ul class="social-icons">
+          <li><a rel="nofollow" href="http://www.facebook.com/templatemo" target="_parent"><i
+                class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          <li><a href="#"><i class="fa fa-rss"></i></a></li>
+          <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <p>Khánh Designed tại <em>BRYCEN Việt Nam</em></p>
+      </div>
+    </div>
+  </div>
+</footer>

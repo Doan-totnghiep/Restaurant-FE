@@ -1,0 +1,83 @@
+ <div class="container-fluid" >
+          <div class="panel panel-primary">
+             <div class="panel-body" style="margin-left: 35px; padding-top: 100px;">
+              
+          
+      
+              <h1 style="text-align: center;">DANH SÁCH MÓN ĂN</h1><br>
+              <div class="row">
+                <div class="col">
+                  
+              
+                  <input type="text" [(ngModel)]="searchValue" (change)="onSearch()" placeholder="Tìm kiếm" class="form-control">
+                </div>
+                <div class="col">
+                  <button type="button" (change)="onSearch()"  class="btn btn-success btn-lg" id="search">Tìm kiếm</button>
+                </div>
+                <div class="col">
+                  <button routerLink="/product/create-product" routerLinkActive="active" class="login100-form-btn float-right">Thêm Món Ăn</button>
+                </div>
+              </div>
+             
+              
+                
+           
+                <table id="example" class="table table-striped table-bordered table-sm row-border hover" cellspacing="0"
+                width="100%">
+
+              <thead style="text-align: center;">
+                <tr>
+                    <th>
+                       TÊN MÓN ĂN
+                    </th>
+                    <th>
+                        GIÁ
+                    </th>
+                    <th>
+                        HÌNH ẢNH
+                    </th>
+                    <th>
+                     ĐƠN VỊ
+                    </th>
+
+                    <th>
+                      MÔ TẢ
+                    </th>
+                    <th>
+                      THƯC ĐƠN
+                     </th>
+                    <th>
+                        Action
+                    </th>
+
+                </tr>
+              </thead>
+            <tbody>
+                <tr *ngFor = "let item of this.product| paginate:{id: 'listing_pagination',
+                itemsPerPage:6,
+                currentPage: page,
+                totalItems:totalRecords}" style="text-align: center;">
+
+                    <td> <br><br>{{ item.food_name}} </td>
+                    <td> <br><br>{{ item.price}} </td>
+                    <!-- <td> <img style="width: 130px;"src="../assets/{{this.item.avatar}}" alt=""></td> -->
+                    <td> <img style="width: 130px;"src="./../../../assets/image/{{this.item.avatar}}" alt=""></td>
+                    <td> <br><br>{{ item.unit}} </td>
+                    <td> <br><br>{{ item.content}} </td>
+                    <td> <br><br>{{ item.service_id?.name}} </td>
+                    <td >
+
+                      <br><button (click) = "UpdateProduct(item.id)" class = "btn btn-info  btn-lg" style="margin-left: 20px;"> Edit</button>
+                      <button (click) = "deleteProduct(item.id)" class = "btn btn-danger  btn-lg" style="margin-left: 20px;">Delete</button>
+
+                     
+                    </td>
+                </tr>
+            </tbody>
+          </table>
+          </div>
+          </div>
+          <pagination-controls id="listing_pagination" style="text-align: center;" maxSize="5" directionLinks="true"(pageChange)="page=$event"></pagination-controls>
+
+      </div>
+

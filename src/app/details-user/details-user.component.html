@@ -1,0 +1,230 @@
+<!-- <div class="col-md-6 offset-md-3" style="padding-top: 90px;">
+  <br> <br>
+<h3>View Employee Details</h3>
+<br> <br>
+<div>
+   <div>
+       <img src="{{imageUrl}}" width="150" height="100"><br><br>
+   </div>
+   <div >
+      <label><b>LastName:</b>{{user.user_name}}</label>
+  </div>
+  <div>
+      <label><b>Email Id:</b>{{user.emailId}}</label>
+  </div>
+</div>
+</div> -->
+
+<section id="main-content" >
+  <section class="wrapper">
+    <div class="row">
+      <div class="col-lg-12">
+        <h3 class="page-header"><i class="fa fa-user-md"></i> Profile</h3>
+        
+      </div>
+    </div>
+    <div class="row">
+      <!-- profile-widget -->
+      <div class="col-lg-12">
+        <div class="profile-widget profile-widget-info">
+          <div class="panel-body">
+            <div class="col-lg-2 col-sm-2">
+              <h3>{{user.user_name}}</h3>
+              <div class="follow-ava">
+                <img src="{{imageUrl}}" alt="">
+              </div>
+              <h5>{{user?.role_id?.name}}</h5>
+            </div>
+            <div class="col-lg-4 col-sm-4 follow-info">
+              <p>Xin chào {{user.user_name}}, đã đến với trang thông tin cá nhân </p>
+              <p>@ {{user.name}}</p>
+              <p><i class="fa fa-twitter"> {{user.user_name}}</i></p>
+              <h6>
+                                <span><i class="icon_clock_alt"></i>11:05 AM</span>
+                                <span><i class="icon_calendar"></i>25.10.13</span>
+                                <span><i class="icon_pin_alt"></i>NY</span>
+                            </h6>
+            </div>
+            <div class="col-lg-2 col-sm-6 follow-info weather-category">
+              <ul>
+                <li class="active">
+
+                  <i class="fa fa-comments fa-2x"> </i><br> Contrary to popular belief, Lorem Ipsum is not simply
+                </li>
+
+              </ul>
+            </div>
+            <div class="col-lg-2 col-sm-6 follow-info weather-category">
+              <ul>
+                <li class="active">
+
+                  <i class="fa fa-bell fa-2x"> </i><br> Contrary to popular belief, Lorem Ipsum is not simply
+                </li>
+
+              </ul>
+            </div>
+            <div class="col-lg-2 col-sm-6 follow-info weather-category">
+              <ul>
+                <li class="active">
+
+                  <i class="fa fa-tachometer fa-2x"> </i><br> Contrary to popular belief, Lorem Ipsum is not simply
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- page start-->
+    <div class="row">
+      <div class="col-lg-12">
+        <section class="panel">
+          <header class="panel-heading tab-bg-info">
+            <ul class="nav nav-tabs">
+              <li class="active">
+                <a data-toggle="tab" href="#profile">
+                                      <i class="icon-home"></i>
+                                      Profile
+                                  </a>
+              </li>
+              
+              <li class="">
+                <a data-toggle="tab" href="#edit-profile">
+                                      <i class="icon-envelope"></i>
+                                      Edit Profile
+                                  </a>
+              </li>
+            </ul>
+          </header>
+          <div class="panel-body">
+            <div class="tab-content">
+                <!-- profile -->
+              <div id="profile" class="tab-pane active">
+                  <section class="panel">
+                      <div class="bio-graph-heading">
+                          xin chào {{user.user_name}} dưới đây là tất cả các thông tin của bạn nếu bạn muốn đổi thông tin thì có mục sửa kế bên để bạn có thể sửa theo ý của mình nhé.
+                      </div>
+                      <div class="panel-body bio-graph-info">
+                        <h1>Thông tin cá nhân</h1>
+                        <div class="row">
+                          <div class="bio-row">
+                            <p><span>Họ và tên </span>: {{user.user_name}} </p>
+                          </div>
+                          <div class="bio-row">
+                            <p><span>Tên người dùng </span>: {{user.name}}</p>
+                          </div>
+                          <div class="bio-row">
+                            <p><span>Email </span>: {{user.emailId}}</p>
+                          </div>
+                          <div class="bio-row">
+                            <p><span>Quyền </span>: {{user?.role_id?.name}}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+              </div>
+              
+              
+              <!-- edit-profile -->
+              <div id="edit-profile" class="tab-pane">
+                <section class="panel">
+                  <div class="panel-body bio-graph-info">
+                    <h1> Profile Info</h1>
+                    <form class="form-horizontal" role="form">
+                      <div class="form-group">
+                        <label class="col-lg-2 control-label">First Name</label>
+                        <div class="col-lg-6">
+                          <input type="text" class="form-control" id="f-name" placeholder=" ">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-lg-2 control-label">Last Name</label>
+                        <div class="col-lg-6">
+                          <input type="text" class="form-control" id="l-name" placeholder=" ">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-lg-2 control-label">About Me</label>
+                        <div class="col-lg-10">
+                          <textarea name="" id="" class="form-control" cols="30" rows="5"></textarea>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-lg-2 control-label">Country</label>
+                        <div class="col-lg-6">
+                          <input type="text" class="form-control" id="c-name" placeholder=" ">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-lg-2 control-label">Birthday</label>
+                        <div class="col-lg-6">
+                          <input type="text" class="form-control" id="b-day" placeholder=" ">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-lg-2 control-label">Occupation</label>
+                        <div class="col-lg-6">
+                          <input type="text" class="form-control" id="occupation" placeholder=" ">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-lg-2 control-label">Email</label>
+                        <div class="col-lg-6">
+                          <input type="text" class="form-control" id="email" placeholder=" ">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-lg-2 control-label">Mobile</label>
+                        <div class="col-lg-6">
+                          <input type="text" class="form-control" id="mobile" placeholder=" ">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="col-lg-2 control-label">Website URL</label>
+                        <div class="col-lg-6">
+                          <input type="text" class="form-control" id="url" placeholder="http://www.demowebsite.com ">
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <div class="col-lg-offset-2 col-lg-10">
+                          <button type="submit" class="btn btn-primary">Save</button>
+                          <button type="button" class="btn btn-danger">Cancel</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- page end-->
+  </section>
+</section>
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <p>Nhà hàng Khánh FOOD &copy; Sẽ không làm bạn thất vọng</p>
+      </div>
+      <div class="col-md-4">
+        <ul class="social-icons">
+          <li><a rel="nofollow" href="http://www.facebook.com/templatemo" target="_parent"><i
+                class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          <li><a href="#"><i class="fa fa-rss"></i></a></li>
+          <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <p>Khánh Designed tại <em>BRYCEN Việt Nam</em></p>
+      </div>
+    </div>
+  </div>
+</footer>

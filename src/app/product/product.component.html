@@ -1,0 +1,48 @@
+<aside>
+
+  <div *ngIf="user" id="sidebar" class="nav-collapse">
+
+    <ul class="sidebar-menu">
+      <li class="active">
+        <a class="" href="index.html">
+          <i class="icon_house_alt"></i>
+          <span routerLink="account/login" routerLinkActive="active" class="nav-link"> Home</span>
+        </a>
+      </li>
+      <li class="sub-menu">
+        <a href="javascript:;" class="">
+          <i class="icon_document_alt"></i>
+          <span routerLink="list-user" routerLinkActive="active" class="nav-link">List User</span>
+
+        </a>
+
+      </li>
+      <li class="sub-menu">
+        <a href="javascript:;" class="">
+          <i class="icon_desktop"></i>
+          <span routerLink="/product/list-product" routerLinkActive="active" class="nav-link">List Food</span>
+        </a>
+
+      </li>
+      <li>
+        <a class="" href="javascript:;">
+          <i class="icon_genius"></i>
+          <span routerLink="/product/list-blog" routerLinkActive="active" class="nav-link">List Blog</span>
+        </a>
+      </li>
+      <li>
+        <a class="" href="javascript:;">
+          <i class="icon_piechart"></i>
+          <span routerLink="/product/list-order" routerLinkActive="active" class="nav-link">List Order</span>
+        </a>
+      </li>
+      <li class="sub-menu">
+        <h1 class="get-app" *ngIf="showMsg">thanh cong </h1>
+      </li>
+    </ul>
+   
+  </div>
+  <ul style="margin-left: 130px;">
+    <router-outlet></router-outlet>
+  </ul>
+</aside>
